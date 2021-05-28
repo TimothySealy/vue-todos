@@ -9,7 +9,7 @@
       <create-todo @on-new-todo="addTodo($event)" />
     </div>
     <div class="row">
-      <div class="col-12 col-sm-10 col-lg-9">
+      <div class="col-12 col-sm-10 col-lg-8">
         <ul class="list-group">
           <todo
             v-for="(todo, index) in todos"
@@ -37,9 +37,9 @@ export default {
   data() {
     return {
       todos: [
-        { description: "Do the dishes", completed: false },
-        { description: "Take out the trash", completed: false },
-        { description: "Finish doing laundry", completed: false }
+        { description: "Test this fancy application", completed: false },
+        { description: "Learn Docker (because it is awesome)", completed: false },
+        { description: "Pass this assignment", completed: false }
       ]
     };
   },
