@@ -9,7 +9,7 @@
       <create-todo @on-new-todo="addTodo($event)" />
     </div>
     <div class="row">
-      <div class="col-12 col-sm-10 col-lg-6">
+      <div class="col-12 col-sm-10 col-lg-9">
         <ul class="list-group">
           <todo
             v-for="(todo, index) in todos"
@@ -32,15 +32,15 @@ import CreateTodo from "./CreateTodo.vue";
 
 export default {
   props: {
-    listName: String,
+    listName: String
   },
   data() {
     return {
       todos: [
         { description: "Do the dishes", completed: false },
         { description: "Take out the trash", completed: false },
-        { description: "Finish doing laundry", completed: false },
-      ],
+        { description: "Finish doing laundry", completed: false }
+      ]
     };
   },
   methods: {
@@ -55,9 +55,9 @@ export default {
     },
     editTodo(todo, newTodoDescription) {
       todo.description = newTodoDescription;
-    },
+    }
   },
-  components: { Todo, CreateTodo },
+  components: { Todo, CreateTodo }
 };
 </script>
 
